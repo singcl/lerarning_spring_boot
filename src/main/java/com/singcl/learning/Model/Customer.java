@@ -1,4 +1,4 @@
-package com.singcl.learning;
+package com.singcl.learning.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,5 +1,6 @@
-package com.singcl.learning;
+package com.singcl.learning.Model;
 
+import com.singcl.learning.Model.Customer;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
