@@ -2,7 +2,12 @@
     const App = Vue.extend({
         template: `
 <el-container>
-  <el-header>基础实例</el-header>
+  <el-header>
+  <div class="main-header">
+  <i class="el-icon-cloudy-and-sunny main-header__brand"></i>
+  <span class="main-header__title">JAVA Cloud</span>
+</div>
+</el-header>
   <el-container>
     <el-aside width="200px">
     <el-menu

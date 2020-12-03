@@ -31,6 +31,22 @@ body > .el-container {
     height: 100%;
 }
 
+.main-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    line-height: normal;
+}
+
+.main-header__brand {
+    font-size: 22px;
+}
+
+.main-header__title {
+    margin-left: 8px;
+}
+
 .main-container {
     line-height: normal;
 }
