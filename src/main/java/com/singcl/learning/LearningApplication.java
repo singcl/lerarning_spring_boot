@@ -82,6 +82,8 @@ public class LearningApplication {
 			log.info("");
 		};
 	}
+	// 递归删除上传目录
+	// 重新创建上传目录
 	@Bean
 	CommandLineRunner init(StorageService storageService) {
 		return (args) -> {
