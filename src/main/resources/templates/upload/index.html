@@ -11,23 +11,15 @@
 </head>
 
 <body>
-<div th:if="${message}">
-    <h2 th:text="${message}"/>
-</div>
-
-
-<div>
-    <ul>
-        <li th:each="file : ${files}">
-            <a th:href="${file}" th:text="${file}"/>
-        </li>
-    </ul>
-</div>
+<!--<div th:if="${message}">-->
+<!--    <h2 th:text="${message}"/>-->
+<!--</div>-->
 
 <div id="app"></div>
 
 <script type="text/html" id="uploadTemplate">
-    <div>
+    <div class="app">
+        <h3>简单的文件上传JAVA</h3>
         <el-upload
                 name="file"
                 class="upload"
@@ -35,12 +27,19 @@
                 action="/uploads"
                 :on-preview="handlePreview"
                 :on-remove="handleRemove"
+                :on-success="handleSuccess"
+                :on-error="handleError"
                 :file-list="fileList"
                 :auto-upload="false">
             <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
             <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
             <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
         </el-upload>
+        <ul class="file-list">
+            <li th:each="file : ${files}">
+                <el-link type="success" th:href="${file}" th:text="${file}"/>
+            </li>
+        </ul>
     </div>
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
