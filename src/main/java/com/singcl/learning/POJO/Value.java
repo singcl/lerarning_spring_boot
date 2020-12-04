@@ -1,4 +1,4 @@
-package com.singcl.learning;
+package com.singcl.learning.POJO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

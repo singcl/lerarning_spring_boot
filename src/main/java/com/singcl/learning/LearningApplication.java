@@ -2,6 +2,7 @@ package com.singcl.learning;
 
 import com.singcl.learning.Model.Customer;
 import com.singcl.learning.Model.CustomerRepository;
+import com.singcl.learning.POJO.Quote;
 import com.singcl.learning.Service.StorageProperties;
 import com.singcl.learning.Service.StorageService;
 import org.slf4j.Logger;

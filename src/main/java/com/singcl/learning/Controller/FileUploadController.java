@@ -1,5 +1,7 @@
 package com.singcl.learning.Controller;
 
+import com.singcl.learning.POJO.CommonResponse;
+import com.singcl.learning.POJO.CommonResultField;
 import com.singcl.learning.Service.StorageFileNotFoundException;
 import com.singcl.learning.Service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +59,20 @@ public class FileUploadController {
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
 
         return "redirect:/upload";
+    }
+
+    // 文件上传Post接口 - 返回JSON
+    @PostMapping("/uploads")
+    @ResponseBody
+    public CommonResponse<String> handleFileUploads(@RequestParam("file") MultipartFile file) {
+        storageService.store(file);
+        CommonResultField resultField = new CommonResultField();
+        resultField.setCode(200);
+        resultField.setMessage("success");
+        CommonResponse<String> res = new CommonResponse<String >();
+        res.setResult(resultField);
+        res.setData("Success");
+        return res;
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
