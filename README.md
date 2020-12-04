@@ -1,3 +1,3 @@
 ## 简单的Java上传实例
 
-![上传图实例](./20201204170241.jpg)
+[![DbghaF.jpg](https://s3.ax1x.com/2020/12/04/DbghaF.jpg)](https://imgchr.com/i/DbghaF)
