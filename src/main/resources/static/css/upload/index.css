@@ -5,4 +5,21 @@
 
 .file-list {
     list-style-type: none;
+    color: white;
+}
+
+.simple-upload  .el-upload__tip {
+    color: white;
+}
+
+.simple-upload  .el-upload-list__item {
+   outline: none;
+}
+
+.simple-upload  .el-upload-list__item:hover {
+    background-color:rgba(255,255,255,0.1);
+}
+
+.simple-upload  .el-upload-list__item-name {
+    color: wheat;
 }

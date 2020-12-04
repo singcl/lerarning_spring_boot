@@ -7,4 +7,6 @@ body {
     height: 100%;
     overflow: auto;
     margin: 0;
+    background: url("https://imgchr.com/content/images/system/home_cover_1601010270144_8921bc.jpg") no-repeat;
+    background-size: cover;
 }
