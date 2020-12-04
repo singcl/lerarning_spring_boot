@@ -38,3 +38,6 @@ out/
 
 ##### Upload File ####
 upload-dir
+
+####
+.DS_Store
