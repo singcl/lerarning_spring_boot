@@ -34,7 +34,7 @@ public class FileUploadController {
                         "serveFile", path.getFileName().toString()).build().toUri().toString())
                 .collect(Collectors.toList()));
 
-        return "upload/uploadForm";
+        return "upload/index";
     }
 
     // 文件列表中文件下载

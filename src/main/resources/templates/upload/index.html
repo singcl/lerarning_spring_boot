@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入ElementUI组件库样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" type="text/css" href="css/normal.css" />
+    <link rel="stylesheet"  type="text/css" href="css/upload/index.css"/>
+    <title>Document</title>
+</head>
+
+<body>
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+
+
+<div>
+    <ul>
+        <li th:each="file : ${files}">
+            <a th:href="${file}" th:text="${file}"/>
+        </li>
+    </ul>
+</div>
+
+<div id="app"></div>
+
+<script type="text/html" id="uploadTemplate">
+    <div>
+        <el-upload
+                name="file"
+                class="upload-demo"
+                ref="upload"
+                action="/upload"
+                :on-preview="handlePreview"
+                :on-remove="handleRemove"
+                :file-list="fileList"
+                :auto-upload="false">
+            <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+            <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+            <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
+    </div>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<!-- 引入ElementUI组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="js/upload/index.js"></script>
+</body>
+</html>
